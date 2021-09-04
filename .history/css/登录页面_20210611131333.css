@@ -1,0 +1,27 @@
+.box {
+    width: 500px;
+    height: 420px;
+    background-color: aqua;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.top {
+    height: 130px;
+    font-size: 26px;
+}
+
+.bottom {
+    height: 85px;
+}
+
+.sign {
+    color: red;
+    margin-left: 20px;
+    margin-right: 5px;
+    font-size: 18px;
+}

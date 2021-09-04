@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/详情样式.css">
+</head>
+
+<body>
+    <!-- top -->
+    <div class="top">
+        <div class="topmiddle marginauto hei100 flex-sb">
+            <div class="topleft flex-a">
+                <div class="logo hei100"><img src="./images/logo.png" class="img100"></div>
+                <div class="Search hei100 flex-a">
+                    <input type="text" class="ipt">
+                </div>
+            </div>
+            <div class="topright flex-a">
+                <div class="flex1">首页</div>
+                <div class="flex2">新手入门</div>
+                <div class="flex1">API</div>
+                <div class="flex1">关于</div>
+                <div class="flex1">注册</div>
+                <div class="flex1">登录</div>
+            </div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="central flex-sb marginauto">
+            <!-- 中间左边部分 -->
+            <div class="central-left flex-d">
+                <!-- 正文内容放里面 -->
+                <div id="article" class="nierong"></div>
+                <div id="comment">
+                    <div class="reply">回复</div>
+                </div>
+
+                <!-- <div>内容文章待数据添加</div> -->
+            </div>
+            <!-- 中间右边部分 -->
+            <div class="central-right flex-d">
+                <!-- 作者页面  sign未设高度待添加js-->
+                <div class="Sign flex-d">
+                    <div class="righttop">作者</div>
+                    <div id="portrait"></div>
+                    <!-- 积分榜 -->
+                </div>
+                <!-- 右边作者其他话题 -->
+                <div class="righttwo flex-d">
+                    <div class="flex1 twotop">作者其它话题</div>
+                    <div class="flex1">[pomelo] master服务 和connector等服..</div>
+                    <div class="flex1">[Pomelo] pomelo start 启动流程</div>
+                </div>
+                <!-- 右边无人回复的话题-->
+                <div class="List flex-d">
+                    <div class="flex2 flex-a datatop">无人回复的话题</div>
+                    <div class="flex1 flex-a data">
+                        [pomelo]master和connector等服...
+                    </div>
+                    <div class="flex1 flex-a data">
+                        使用Socket.I0进行授权和握手
+                    </div>
+                    <div class="flex1 flex-a data">
+                        否可以使用nginx转发websocket实现No...
+                    </div>
+                    <div class="flex1 flex-a data">
+                        typescript+nodejs报错:Cannot redeclare...
+                    </div>
+                    <div class="flex1 two1 flex-a data">
+                        现在firefox的更新是不是在更新tab?
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- 底部 -->
+        <div class="bottom">
+            <div class="bott1">
+                <div>RSS | 源码地址</div>
+                <div class="cnode">CNode社区为国内最专业的Node.js 开源技术社区，致于Node.js 的技术研究。</div>
+                <div class="cnode">服务器搭建在<img src="./images/9.png">存储赞助商为<img src="./images/7.png"> </div>
+                <div class="cnode flex">新手搭建 Node.js 服务器，推荐使用无需备案的
+                    <div class="www">
+                        DigitalOcean(https://www.digitalocean.com/)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src='./js/dayjs.min.js'></script>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        let article = document.getElementById('article')
+        let portrait = document.getElementById('portrait')
+        let comment = document.getElementById('comment')
+        let reply = document.getElementsByClassName('reply')[0]
+        let id = location.search.split('=')[1]
+        console.log(id);
+        $.ajax({
+            url: `https://cnodejs.org/api/v1/topic/${id}`,
+            method: "GET",
+            success: (res) => {
+                console.log(res);
+                if (res.success === true) {
+                    // 作者头像
+                    let author = document.createElement('img')
+                    author.src = res.data.author.avatar_url
+                    author.classList.add('author')
+                    portrait.appendChild(author)
+                    // 作者名字
+                    let name = document.createElement('div')
+                    name.innerText = res.data.author.loginname
+                    portrait.appendChild(name)
+                    // 内容部分
+                    let text = document.createElement('div')
+                    text.innerHTML = res.data.content
+                    text.classList.add('text')
+                    article.appendChild(text)
+                    // 评论区头像
+                    res.data.replies.map((item) => {
+                        // 评论区大盒子 
+                        let head = document.createElement('div')
+                        head.classList.add('head')
+                        // 评论区左边
+                        let headleft = document.createElement('div')
+                        headleft.classList.add('headleft')
+                        // 评论id name是大盒子，nameid和critic是上下两个盒子
+                        let name = document.createElement('div')
+                        name.classList.add('name')
+                        // 楼层和月份
+                        let time = document.createElement('div')
+                        let nameid = document.createElement('div')
+                        nameid.classList.add('nameid')
+                        nameid.appendChild(time)
+
+                        // 评论内容 
+                        let critic = document.createElement('div')
+                        critic.innerHTML = item.content
+                        nameid.innerHTML = item.author.loginname
+                        name.appendChild(nameid)
+                        name.appendChild(critic)
+                        // 评论区右边
+                        let headright = document.createElement('div')
+
+                        // 
+                        head.appendChild(headleft)
+                        head.appendChild(headright)
+                        // 评论区头像
+                        let picture = document.createElement('img')
+                        picture.src = item.author.avatar_url
+
+                        headleft.appendChild(picture)
+                        headleft.appendChild(name)
+                        comment.appendChild(head)
+                    })
+
+                }
+            },
+            error: (err) => {
+                console.log(err);
+            }
+        })
+
+
+
+    </script>
+</body>
+
+</html>

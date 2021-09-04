@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <script src="./js/jquery.min.js"></script>
+    <style>
+        .box {
+            width: 500px;
+            height: 420px;
+            /* background-color: antiquewhite; */
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            font-size: 24px;
+            border-radius: 5px;
+            box-shadow: 0 0 1px #666;
+        }
+
+        .node {
+            height: 125px;
+            border-bottom: 1px #EBEEF5 solid;
+        }
+
+        .but {
+            height: 40px;
+            width: 100px;
+            background-color: #349DFB;
+            font-size: 14px;
+            color: #fff;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .sign {
+            color: red;
+            margin-left: 15px;
+            margin-right: 5px;
+            position: relative;
+            top: 3px;
+        }
+
+        .name {
+            width: 85px;
+            font-size: 14px;
+            margin-right: 15px;
+        }
+
+        input {
+            width: 300px;
+            height: 40px;
+            outline: none;
+            border-radius: 5px;
+            border: 1px solid #EBEEF5;
+        }
+
+        .Tips {
+            height: 15px;
+        }
+
+        .namei {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box flex-d">
+        <div class="node wi100 flex-ja font-w7">欢迎来到cNode社区</div>
+        <div class="flex1 flex-a namei">
+            <div class="sign">*</div>
+            <div class="name">请输入用户名</div>
+            <div id="username"><input type="text"></div>
+        </div>
+        <div class="Tips"></div>
+        <div class="flex1 flex-a">
+            <div class="sign">*</div>
+            <div class="name">请输入密码</div>
+            <div id="password"><input type="password"></div>
+        </div>
+        <div class="Tips"></div>
+        <div class="flex1 flex-a">
+            <div class="sign">*</div>
+            <div class="name">请确认密码</div>
+            <div id="agin"><input type="password"></div>
+        </div>
+        <div class="Tips"></div>
+        <div class="but wi100 marginauto flex-ja">立即登录</div>
+    </div>
+
+    <script>
+        // 先获取元素
+        let username = document.getElementById('username')
+        let password = document.getElementById('password')
+        let agin = document.getElementById('agin')
+        let tips = document.getElementsByClassName('Tips')
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

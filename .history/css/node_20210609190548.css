@@ -1,0 +1,111 @@
+.top {
+    height: 50px;
+    width: 100%;
+    background-color: #444444;
+}
+
+.topmiddle {
+    width: 1400px;
+}
+
+.topleft {
+    width: 390px;
+}
+
+.topright {
+    width: 350px;
+    text-align: right;
+    color: #CCCCCC;
+}
+
+.topright div:hover {
+    color: #fff;
+}
+
+.logo {
+    width: 125px;
+    background-color: cornflowerblue;
+    margin-right: 15px;
+}
+
+.Search {
+    width: 235px;
+    height: 100%;
+}
+
+.Search input {
+    width: 235px;
+    height: 25px;
+    border-radius: 15px;
+    background-image: url(../images/搜索.png);
+    background-repeat: no-repeat;
+    background-color: #888888;
+    outline: none;
+    border: 0;
+}
+
+.ipt:hover {
+    background-color: #fff;
+}
+
+.box {
+    width: 100%;
+    background-color: #E1E1E1;
+}
+
+.central {
+    width: 1400px;
+
+}
+
+.central-left {
+    width: 1095px;
+    background-color: aqua;
+}
+
+.whole {
+    color: #fff;
+    padding: 2px 2px;
+    border-radius: 2px;
+    background-color: #80BD01;
+}
+
+.Navigation {
+    height: 40px;
+    color: #80BD01;
+    background-color: #F6F6F6;
+}
+
+.Navigation div {
+    margin-left: 20px;
+}
+
+.central-right {
+    margin-left: 15px;
+    width: 290px;
+}
+
+.Sign {
+    height: 120px;
+    width: 100%;
+    background-color: aquamarine;
+    padding-left: 10px;
+}
+
+.Sign1 {
+    height: 35px;
+    width: 150px;
+    padding: 10px 8px;
+    color: #fff;
+    background-color: #5BC0DE;
+    margin-top: 5px;
+}
+
+.login {
+    color: #666666;
+}
+
+.righttop {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/登录页面.css">
+    <script src="./js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="box flex-d">
+        <div class="top wi100 flex-ja font-w7">欢迎来到cNode社区</div>
+        <div class="flex1 flex-a">
+            <div class="sign">*</div>
+            <div class="username">请输入用户名</div>
+            <div class="ipt"><input type="text" id="username"></div>
+        </div>
+        <!-- 空白部分 -->
+        <div class="blank" id='name'></div>
+        <div class="flex1 flex-a">
+            <div class="sign">*</div>
+            <div class="username">请输入密码</div>
+            <div class="ipt"><input type="text" id="password"></div>
+        </div>
+        <!-- 空白部分 -->
+        <div class="blank"></div>
+        <div class="flex1 flex-a">
+            <div class="sign">*</div>
+            <div class="username">请确认密码</div>
+            <div class="ipt"><input type="text" id="confirm"></div>
+        </div>
+        <!-- 空白部分 -->
+        <div class="blank"></div>
+        <div class="bottom flex-ja">
+            <button>立即登录</button>
+        </div>
+    </div>
+    <script>
+        let username = document.getElementById('username')
+        let password = document.getElementById('password')
+        let confirm = document.getElementById('confirm')
+        let name = document.getElementById('name')
+        name.classList.add('name')
+        // // letc = username.e.target.value
+        // console.log(user);
+        // // if ()
+        username.addEventListener('focus', (e) => {
+            let user = username.value
+            username.classList.add(user)
+            console.log(user);
+            // if()
+            console.log(user.length);
+            if (user.length === 0) {
+                name.innerHTML = '请输入用户名'
+            } else if (user.length > 6 || user.length < 8) {
+                name.innerHTML = '请输入6到8位用户名'
+            }
+        })
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

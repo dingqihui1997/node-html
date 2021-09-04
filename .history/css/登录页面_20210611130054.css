@@ -1,0 +1,15 @@
+.box {
+    width: 500px;
+    height: 420px;
+    background-color: aqua;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.top {
+    height: 130px;
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/node.css">
+</head>
+
+<body>
+    <!-- 顶部导航栏 -->
+    <div class="top">
+        <div class="topmiddle marginauto hei100 flex-sb">
+            <div class="topleft flex-a">
+                <div class="logo hei100"><img src="./images/logo.png" class="img100"></div>
+                <div class="Search hei100 flex-a">
+                    <input type="text" class="ipt">
+                </div>
+            </div>
+            <div class="topright flex-a">
+                <div class="flex1">首页</div>
+                <div class="flex2">新手入门</div>
+                <div class="flex1">API</div>
+                <div class="flex1">关于</div>
+                <div class="flex1">注册</div>
+                <div class="flex1">登录</div>
+            </div>
+        </div>
+    </div>
+    <!-- 中间部分 -->
+    <div class="box">
+        <div class="central flex-sb marginauto">
+            <!-- 中间左边部分 -->
+            <div class="central-left flex-d">
+                <!-- 右边菜单 -->
+                <div class="Navigation flex-a">
+                    <div class="whole">全部</div>
+                    <div>精华</div>
+                    <div>分享</div>
+                    <div>问答</div>
+                    <div>招聘</div>
+                    <div>客户端测试</div>
+                </div>
+
+                <div id="article"></div>
+                <!-- <div>内容文章待数据添加</div> -->
+            </div>
+            <!-- 中间右边部分 -->
+            <div class="central-right flex-d">
+                <!-- 登录注册页面 -->
+                <div class="Sign flex-d">
+                    <div class="righttop">CNode: Node.js专业中文社区</div>
+                    <div class="flex">您可以<div class="login">登录</div>或<div class="login">注册</div>,也可以</div>
+                    <div class="Sign1 flex-a">通过GitHub登录</div>
+                </div>
+                <!-- 右边第二个话题榜 -->
+                <div class="righttwo flex-d">
+                    <div class="flex1 twotop">无人回复的话题</div>
+                    <div class="flex1">使用Socket.I0进行授权和握手</div>
+                    <div class="flex1">是否可以使用nginx转发websocket实现No...</div>
+                    <div class="flex1">typescript+nodejs报错: Cannot redeclare..</div>
+                    <div class="flex1">现在firefox的更新是不是在更新tab?</div>
+                    <div class="flex1 two1">web如何检测Ipad_上safari处于分屏模式</div>
+                </div>
+                <div class="List flex-d">
+                    <div class="flex2 flex-a datatop">积分榜TOP 100>></div>
+                    <div class="flex1 flex-a data">
+                        <div>22720</div>
+                        <div>i5ting</div>
+                    </div>
+                    <div class="flex1 flex-a data">
+                        <div>22720</div>
+                        <div>i5ting</div>
+                    </div>
+                    <div class="flex1 flex-a data">
+                        <div>22720</div>
+                        <div>i5ting</div>
+                    </div>
+                    <div class="flex1 flex-a data">
+                        <div>22720</div>
+                        <div>i5ting</div>
+                    </div>
+                    <div class="flex1 flex-a data">
+                        <div>22720</div>
+                        <div>i5ting</div>
+                    </div>
+                    <div class="flex1 flex-a data">
+                        <div>22720</div>
+                        <div>i5ting</div>
+                    </div>
+                    <div class="flex1 flex-a data">
+                        <div>22720</div>
+                        <div>i5ting</div>
+                    </div>
+                    <div class="flex1 flex-a data">
+                        <div>22720</div>
+                        <div>i5ting</div>
+                    </div>
+                    <div class="flex1 flex-a data">
+                        <div>22720</div>
+                        <div>i5ting</div>
+                    </div>
+                    <div class="flex1 two1 flex-a data">
+                        <div>22720</div>
+                        <div>i5ting</div>
+                    </div>
+                </div>
+                <!-- 右边地三个模块友情社区 -->
+                <div class="three flex-d">
+                    <div class="three1 flex-a">友情社区</div>
+                    <div class="flex1 flex-a"><img src="./images/6.png"></div>
+                    <div class="flex1 flex-a"><img src="./images/4.png"></div>
+                    <div class="flex1 flex-a"><img src="./images/3.png"></div>
+                </div>
+                <!-- 二维码部分 -->
+                <div class="customer flex-d wi100">
+                    <div class="three1 flex-a">客户端二维码</div>
+                    <div class="cust flex-ja"><img src="./images/2.png" class="img100"></div>
+                    <div class="flex-ja">客户端源码地址</div>
+                </div>
+            </div>
+
+        </div>
+        <div class="bottom">
+            <div class="bott1">
+                <div>RSS | 源码地址</div>
+                <div class="cnode">CNode社区为国内最专业的Node.js 开源技术社区，致于Node.js 的技术研究。</div>
+                <div class="cnode">服务器搭建在<img src="./images/9.png">存储赞助商为<img src="./images/7.png"> </div>
+                <div class="cnode flex">新手搭建 Node.js 服务器，推荐使用无需备案的
+                    <div class="www">
+                        DigitalOcean(https://www.digitalocean.com/)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+
+
+    <script src='./js/dayjs.min.js'></script>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        let article = document.getElementById('article')
+        $.ajax({
+            url: 'https://cnodejs.org/api/v1/topics',
+            method: "GET",
+            success: (res) => {
+                console.log(res);
+                if (res === true) {
+                    res.data.map((item) => {
+                        let div = document.createElement('div')
+                        div.classList.add('addition')
+                        let div1 = document.createElement('div')
+                        let avatar = document.createElement('img')
+                        avatar.src = item.author.avatar_url
+                        dItem.innerHTML = item.title
+                        avatar
+                        div.appendChild(avatar)
+                        div.appendChild(div1)
+                        article.appendChild(div)
+
+                    })
+                }
+            },
+            error: (err) => {
+                console.log(err);
+            }
+        })
+    </script>
+
+
+
+</body>
+
+</html>

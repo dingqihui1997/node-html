@@ -1,0 +1,75 @@
+body {
+    background-color: #FEFEFE;
+}
+
+.box {
+    width: 500px;
+    height: 450px;
+    background-color: #fff;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0 0 1px #666;
+    border-radius: 5px;
+}
+
+.top {
+    height: 130px;
+    font-size: 26px;
+    border-bottom: 1px #EBEEF5 solid;
+}
+
+.bottom {
+    height: 85px;
+}
+
+button {
+    height: 40px;
+    width: 95px;
+    background-color: #349DFB;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.sign {
+    color: red;
+    margin-left: 20px;
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+.up {
+    height: 50px;
+}
+
+.username {
+    font-size: 16px;
+    width: 100px;
+}
+
+.ipt {
+    margin-left: 15px;
+
+}
+
+.ipt input {
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #ECEEF1;
+}
+
+.ipt input:hover {
+    border: 1px solid #409EFF;
+}
+
+.name {
+    margin-left: 150px;
+    color: red;
+    font-size: 12px;
+}

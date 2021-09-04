@@ -1,0 +1,184 @@
+.top {
+    height: 50px;
+    width: 100%;
+    background-color: #444444;
+}
+
+.topmiddle {
+    width: 1400px;
+}
+
+.topleft {
+    width: 390px;
+}
+
+.topright {
+    width: 350px;
+    text-align: right;
+    color: #CCCCCC;
+}
+
+.topright div:hover {
+    color: #fff;
+}
+
+.logo {
+    width: 125px;
+    background-color: cornflowerblue;
+    margin-right: 15px;
+}
+
+.Search {
+    width: 235px;
+    height: 100%;
+}
+
+.Search input {
+    width: 235px;
+    height: 25px;
+    border-radius: 15px;
+    background-image: url(../images/搜索.png);
+    background-repeat: no-repeat;
+    background-color: #888888;
+    outline: none;
+    border: 0;
+}
+
+.ipt:hover {
+    background-color: #fff;
+}
+
+.box {
+    width: 100%;
+    background-color: #E1E1E1;
+}
+
+.central {
+    width: 1400px;
+
+}
+
+.central-left {
+    width: 1095px;
+    background-color: #fff;
+    margin-top: 15px;
+}
+
+.whole {
+    color: #fff;
+    padding: 2px 2px;
+    border-radius: 2px;
+    background-color: #80BD01;
+}
+
+.Navigation {
+    height: 40px;
+    color: #80BD01;
+    background-color: #F6F6F6;
+}
+
+.Navigation div {
+    margin-left: 20px;
+}
+
+.central-right {
+    margin-left: 15px;
+    width: 290px;
+    margin-top: 15px;
+}
+
+.Sign {
+    /* height: 120px; */
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 15px;
+}
+
+.login {
+    color: #666666;
+}
+
+.righttop {
+    height: 40px;
+    width: 100%;
+    background-color: #F6F6F6;
+    padding-left: 10px;
+}
+
+.righttwo {
+    height: 100px;
+    font-size: 14px;
+    background-color: #fff;
+    margin-bottom: 15px;
+}
+
+.righttwo div {
+    padding-top: 10px;
+    color: #778087;
+    padding-left: 10px;
+}
+
+.two1 {
+    padding-bottom: 10px;
+}
+
+.twotop {
+    background-color: #F6F6F6;
+}
+
+.List {
+    height: 290px;
+    width: 100%;
+    color: #666;
+    background-color: #fff;
+
+}
+
+.List div {
+    padding-left: 10px;
+}
+
+.datatop {
+    background-color: #F6F6F6;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.data div {
+    margin-right: 10px;
+}
+
+.bottom {
+    height: 245px;
+    width: 100%;
+    margin-top: 15px;
+    background-color: #fff;
+}
+
+.bott1 {
+    height: 100%;
+    width: 1400px;
+    margin: 0 auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: 16px;
+}
+
+.www {
+    color: #8488CC;
+}
+
+#article {
+    width: 100%;
+}
+
+#portrait {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.author {
+    width: 48px;
+    height: 48px;
+}

@@ -1,0 +1,48 @@
+.top {
+    height: 50px;
+    width: 100%;
+    background-color: #444444;
+}
+
+.topmiddle {
+    width: 1400px;
+}
+
+.topleft {
+    width: 390px;
+}
+
+.topright {
+    width: 350px;
+    text-align: right;
+    color: #CCC3BB;
+}
+.topright div:hover {
+    color: ;
+}
+
+.logo {
+    width: 125px;
+    background-color: cornflowerblue;
+    margin-right: 15px;
+}
+
+.Search {
+    width: 235px;
+    height: 100%;
+}
+
+.Search input {
+    width: 235px;
+    height: 25px;
+    border-radius: 15px;
+    background-image: url(../images/搜索.png);
+    background-repeat: no-repeat;
+    background-color: #888888;
+    outline: none;
+    border: 0;
+}
+
+.ipt:hover {
+    background-color: #fff;
+}

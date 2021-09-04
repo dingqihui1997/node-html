@@ -1,0 +1,25 @@
+.top {
+    height: 50px;
+    width: 100%;
+    background-color: #444444;
+}
+
+.topmiddle {
+    width: 1400px;
+    background-color: aqua;
+}
+
+.topleft {
+    width: 390px;
+    background-color: blueviolet;
+}
+
+.topright {
+    width: 350px;
+    background-color: chartreuse;
+}
+
+.logo {
+    width: 130px;
+    background-color: cornflowerblue;
+}

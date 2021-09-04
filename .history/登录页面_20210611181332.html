@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/登录页面.css">
+    <script src="./js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="box flex-d">
+        <div class="top wi100 flex-ja font-w7">欢迎来到cNode社区</div>
+        <div class="flex1 flex-a">
+            <div class="sign">*</div>
+            <div class="username">请输入用户名</div>
+            <div class="ipt"><input type="text" id="username"></div>
+        </div>
+        <!-- 空白部分 -->
+        <div class="blank" id='name'></div>
+        <div class="flex1 flex-a">
+            <div class="sign">*</div>
+            <div class="username">请输入密码</div>
+            <div class="ipt"><input type="password" id="password"></div>
+        </div>
+        <!-- 空白部分 -->
+        <div class="blank" id='pass'></div>
+        <div class="flex1 flex-a">
+            <div class="sign">*</div>
+            <div class="username">请确认密码</div>
+            <div class="ipt"><input type="password" id="confirm"></div>
+        </div>
+        <!-- 空白部分 -->
+        <div class="blank" id='again'></div>
+        <div class="bottom flex-ja">
+            <button>立即登录</button>
+        </div>
+    </div>
+    <script>
+        // 三个input
+        let username = document.getElementById('username')
+        let password = document.getElementById('password')
+        let confirm = document.getElementById('confirm')
+        let but = document.getElementsByTagName('button')[0]
+        // 三个提示框
+        let name = document.getElementById('name')
+        let pass = document.getElementById('pass')
+        let again = document.getElementById('again')
+        // let border1 = document.getElementsByClassName('blank')[0]
+        // let border2 = document.getElementsByClassName('blank')[1]
+        // let border3 = document.getElementsByClassName('blank')[3]
+        // border1
+        // 用户名部分
+        username.addEventListener('blur', (e) => {
+            let user = username.value
+            name.innerHTML = '请输入用户名'
+            // console.log(user);
+            console.log(user.length)
+            if (username.value === '') {
+                name.innerHTML = '请输入用户名'
+                username.style.border = '1px solid red'
+            }
+            else if (user.length < 6 || user.length > 10) {
+                name.innerHTML = '请输入6到10位用户名'
+                username.style.border = '1px solid  red'
+            }
+            else if (user.length !== 0) {
+                name.innerHTML = ''
+                username.style.border = '1px solid #ECEEF1'
+            }
+        })
+        // 密码部分
+        password.addEventListener('blur', (e) => {
+
+            let user1 = password.value.length//密码长度
+            pass.innerHTML = '请输入密码'
+            // console.log(user);
+            console.log(user1)
+            if (user1 === '') {
+                pass.innerHTML = '请输入密码'
+                password.style.border = '1px solid red'
+            }
+            else if (user1 < 6 || user1 > 8) {
+                pass.innerHTML = '请输入6到8位密码'
+                password.style.border = '1px solid  red'
+            }
+            else if (user1 !== 0) {
+                pass.innerHTML = ''
+                password.style.border = '1px solid #ECEEF1'
+            }
+        })
+
+        // 再次输入密码框
+        confirm.addEventListener('blur', () => {
+            let word = password.value //密码的值
+            let con = confirm.value //再次输入密码的值
+            let user2 = confirm.value.length  //密码的长度
+            // 设置成初始值 当密码正确，不满足if，就没有提示了
+            again.innerHTML = ''
+
+            console.log(user2);
+            if (user2 === 0 || con !== word) {
+                again.innerHTML = '密码不一致'
+            }
+        })
+        but.addEventListener('click', () => {
+            let u = username.value
+            let P = password.value //密码的值
+            let con = confirm.value //再次输入密码的值
+            if (user !== '' || word !== '' || con !== '') {
+                $.ajax({
+                    url: 'https://www.liulongbin.top:8888/api/private/v1/login',
+                    method: 'POST',
+                    data: {
+                        username: u,
+                        password: p
+                    },
+                    success: (res) => {
+                        console.log(res)
+                    },
+                })
+            }
+        })
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
